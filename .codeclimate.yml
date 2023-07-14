@@ -1,0 +1,13 @@
+exclude_sparherns:
+  - "coverage"
+
+plugins:
+  eslint:
+    enabled: true
+
+exclude_patterns:
+  - "db/"
+  - "dist/"
+  - "**/node_modules/"
+  - "**/*.js"
+  - "**/*.d.ts"

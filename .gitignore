@@ -1,0 +1,59 @@
+# IDEs and editors
+*.swp
+.idea/*
+.vs/*
+.vscode/*
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Better settings for VS Code
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Compiled output
+/dist
+/node_modules
+
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.yarn-integrity
+lerna-debug.log*
+
+# Ignore uploaded files in development.
+/storage/*
+!/storage/.keep
+/tmp/storage/*
+!/tmp/storage/
+!/tmp/storage/.keep
+
+# Ignore application configuration
+.env
+.env.dev
+.env.docker
+
+# Redis dump
+dump.rdb
+
+# Docker
+.docker-sync/*
+
+# OS
+.DS_Store
+
+# Misc
+.wakatime-project
+
+# Tests
+/coverage
+/.nyc_output
