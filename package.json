@@ -1,11 +1,31 @@
 {
-  "name": "api",
-  "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "name": "boocoda-api",
+  "version": "0.1.0",
+  "description": "Boocoda is an open source platform that collects free and out of copyright books on programming, computer science and mathematics",
+  "author": {
+    "name": "Max Barsukov",
+    "email": "maximbarsukov@bk.ru",
+    "url": "https://github.com/maxbarsukov"
+  },
+  "contributors": [
+    {
+      "name": "Martin Valts",
+      "email": "martin.valts@mail.ru",
+      "url": "https://github.com/Martin-Valts"
+    }
+  ],
   "private": true,
-  "license": "UNLICENSED",
+  "license": "MIT",
   "scripts": {
+    "typeorm": "env-cmd ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
+    "migration:generate": "yarn run typeorm -- --dataSource=src/database/data-source.ts migration:generate",
+    "migration:create": "yarn run typeorm -- migration:create",
+    "migration:run": "yarn run typeorm -- --dataSource=src/database/data-source.ts migration:run",
+    "migration:revert": "yarn run typeorm -- --dataSource=src/database/data-source.ts migration:revert",
+    "schema:drop": "yarn run typeorm -- --dataSource=src/database/data-source.ts schema:drop",
+    "seed:create": "hygen seeds create",
+    "seed:run": "ts-node -r tsconfig-paths/register ./src/database/seeds/run-seed.ts",
+    "prebuild": "rimraf dist",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
@@ -17,7 +37,8 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "env-cmd jest --config ./test/jest-e2e.json",
+    "prepare": "is-ci || husky install"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
@@ -39,6 +60,8 @@
     "eslint": "^8.42.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "husky": "8.0.3",
+    "is-ci": "3.0.1",
     "jest": "^29.5.0",
     "prettier": "^2.8.8",
     "source-map-support": "^0.5.21",
@@ -65,5 +88,8 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
