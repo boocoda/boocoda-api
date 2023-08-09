@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: Boocoda Community Chat
+    url: https://t.me/boocoda
+    about: We invite you to join our Boocoda Community Chat, where you can find support from our team and the community, but where you can also share your projects or just talk about random stuff with other members of the Boocoda community 😁.
+
+  - name: Boocoda API Public Backlog
+    url: https://github.com/orgs/boocoda/projects/3
+    about: See what's next on our public backlog at Github Projects, where you can submit your ideas and vote for the features you want.
+
+  - name: Feature Request
+    url: https://github.com/boocoda/product/discussions/categories/feedback-feature-proposal
+    about: You can also go to our Product repository and open a discussion about a feature and give your feedback. Feel free to participate in the current discussions. We are looking forward to reading your comments.
