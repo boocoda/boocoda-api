@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "aaron-bond.better-comments",
+    "EditorConfig.EditorConfig",
+    "AbhijoyBasak.nestjs-files",
+    "rubiin.nestjs",
+    "mikestead.dotenv"
+  ]
+}
